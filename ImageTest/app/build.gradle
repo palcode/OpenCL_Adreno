@@ -5,15 +5,15 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.chabecki.smallbenchmark"
+        applicationId "com.chabecki.imagetest"
         minSdkVersion 19
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
         ndk {
             abiFilters "armeabi-v7a"
-            moduleName "Vectors"
-            cFlags "-DANDROID_CL -I${project.buildDir}/include -Ijnigraphics"
+            moduleName "Images"
+            cFlags "-DANDROID_CL -I${project.buildDir}/include"
             ldLibs "${project.buildDir}/external/libOpenCL.so", "log", "jnigraphics"
             stl "stlport_static"
         }
